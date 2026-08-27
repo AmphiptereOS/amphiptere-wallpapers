@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZDDNFE6F4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -13,12 +12,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amphiptere OS Wallpapers | Official Purple Team Backgrounds</title>
-<meta name="description" content="Official Amphiptere OS wallpapers - Dark purple, hacker, cybersecurity aesthetic wallpapers for desktop. 4K">
+<meta name="description" content="Official Amphiptere OS wallpapers - Dark purple, hacker, cybersecurity aesthetic wallpapers for desktop. 4K free download">
 
-<!-- FAVICON FIX FOR GOOGLE -->
-<link rel="icon" type="image/x-icon" href="https://amphiptereos.github.io/amphiptere-wallpapers/favicon.ico">
-<link rel="icon" type="image/png" sizes="192x192" href="https://amphiptereos.github.io/amphiptere-wallpapers/logo.png">
-<link rel="apple-touch-icon" href="https://amphiptereos.github.io/amphiptere-wallpapers/logo.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -64,19 +62,30 @@ Contact: amphiptereos@gmail.com
 </footer>
 
 <script>
-const totalWallpapers = 10; 
+const wallpapers = [
+  { file: "amphiptere-os-black-gold-wings-4k-wallpaper.png", title: "Midnight Gold" },
+  { file: "amphiptere-os-blue-black-silver-amphiptere-4k-wallpaper.png", title: "Arctic Blue" },
+  { file: "amphiptere-os-olive-gold-amphiptere-4k-wallpaper.png", title: "Olive Gold" },
+  { file: "amphiptere-os-cyan-green-amphiptere-logo-4k-wallpaper.png", title: "Neon Amphiptere" },
+  { file: "amphiptere-os-olive-amphiptere-logo-4k-wallpaper.png", title: "Olive Amphiptere" },
+  { file: "amphiptere-os-light-gray-amphiptere-logo-4k-wallpaper.png", title: "Ghost Amphiptere" },
+  { file: "amphiptere-os-light-gray-silver-amphiptere-4k-wallpaper.png", title: "Ghost Silver" },
+  { file: "amphiptere-os-olive-silver-amphiptere-4k-wallpaper.png", title: "Olive Silver" },
+  { file: "amphiptere-os-orange-gold-amphiptere-4k-wallpaper.png", title: "Sunset Gold" },
+  { file: "amphiptere-os-gold-gradient-amphiptere-4k-wallpaper.png", title: "Golden Hour" }
+];
+
 const grid = document.getElementById('wallGrid');
-for(let i=1;i<=totalWallpapers;i++){
-  const name = `wallpaper${i}.png`;
+wallpapers.forEach(w => {
   grid.innerHTML += `
   <div class="wall-card">
-    <img src="${name}" alt="Amphiptere Wallpaper ${i}" loading="lazy" onerror="this.parentElement.style.display='none'" onclick="openLb('${name}')">
+    <img src="${w.file}" alt="${w.title} - Amphiptere OS Official 4K Wallpaper" loading="lazy" onerror="this.parentElement.style.display='none'" onclick="openLb('${w.file}')">
     <div class="wall-info">
-      <span>Wallpaper ${i}</span>
-      <a class="btn-dl" href="${name}" download>Download</a>
+      <span>${w.title}</span>
+      <a class="btn-dl" href="${w.file}" download>Download</a>
     </div>
   </div>`;
-}
+});
 function openLb(src){
   document.getElementById('lbImg').src=src;
   document.getElementById('lightbox').style.display='flex';
