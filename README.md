@@ -11,7 +11,7 @@ Features:
 - Free for personal use
 - Optimized for desktop & mobile
 
-Preview: https://amphiptereos.github.io/wallpapers 
+Preview: https://amphiptereos.github.io/amphiptere-wallpapers/
 
 Main OS: https://amphiptereos.github.io
 
