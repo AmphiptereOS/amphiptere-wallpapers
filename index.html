@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amphiptere OS Wallpapers | Official Purple Team Backgrounds</title>
+<meta name="description" content="Official Amphiptere OS wallpapers - Dark purple, hacker, cybersecurity aesthetic wallpapers for desktop. 4K">
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#08080e;color:#e9e9ff;font-family:'Segoe UI',system-ui;line-height:1.6}
+.hero{text-align:center;padding:60px 20px 30px;background:radial-gradient(circle at top,#2a0a4a 0%,#08080e 70%)}
+.hero img{width:90px;height:90px;border-radius:18px;box-shadow:0 0 25px #a855f755}
+.hero h1{font-size:2.8rem;font-weight:900;margin-top:12px} .hero h1 b{color:#a855f7}
+.hero p{color:#b8b8cc;max-width:600px;margin:12px auto 0}
+.badge{display:inline-block;margin-top:14px;background:#1e1e2f;border:1px solid #3a2a5a;color:#a855f7;padding:6px 14px;border-radius:999px;font-size:.85rem}
+.container{max-width:1200px;margin:0 auto;padding:30px 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.wall-card{background:#12121a;border:1px solid #232330;border-radius:20px;overflow:hidden;transition:.25s}
+.wall-card:hover{transform:translateY(-4px);border-color:#a855f755;box-shadow:0 10px 30px #000}
+.wall-card img{width:100%;height:200px;object-fit:cover;display:block;cursor:pointer;background:#0e0e16}
+.wall-info{padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.wall-info span{font-weight:700;color:#c084fc}
+.btn-dl{background:#a855f7;color:#fff;padding:7px 16px;border-radius:999px;text-decoration:none;font-weight:800;font-size:.85rem}
+.btn-dl:hover{background:#9333ea}
+footer{text-align:center;padding:50px;color:#666;border-top:1px solid #1a1a28;margin-top:40px;font-size:.9rem}
+a{color:#a855f7;text-decoration:none}
+/* lightbox */
+#lightbox{position:fixed;inset:0;background:#000d;display:none;justify-content:center;align-items:center;z-index:99;padding:20px}
+#lightbox img{max-width:95vw;max-height:90vh;border-radius:12px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<img src="logo.png" alt="Amphiptere Logo">
+<h1>Amphiptere<b>OS</b> Wallpapers</h1>
+<p>Official Purple Team wallpapers. Dark, minimal, hacker aesthetic for your desktop.</p>
+<div class="badge">4K • Dark Purple • Free Download</div>
+</div>
+
+<div class="container">
+<div class="grid" id="wallGrid"></div>
+</div>
+
+<div id="lightbox" onclick="this.style.display='none'"><img id="lbImg"></div>
+
+<footer>
+© 2026 Amphiptere OS - Wallpapers | <a href="https://amphiptereos.github.io">Main Site</a><br>
+Contact: amphiptereos@gmail.com
+</footer>
+
+<script>
+const totalWallpapers = 10; 
+
+const grid = document.getElementById('wallGrid');
+for(let i=1;i<=totalWallpapers;i++){
+  const name = `wallpaper${i}.png`;
+  grid.innerHTML += `
+  <div class="wall-card">
+    <img src="${name}" alt="Amphiptere Wallpaper ${i}" loading="lazy" onerror="this.parentElement.style.display='none'" onclick="openLb('${name}')">
+    <div class="wall-info">
+      <span>Wallpaper ${i}</span>
+      <a class="btn-dl" href="${name}" download>Download</a>
+    </div>
+  </div>`;
+}
+function openLb(src){
+  document.getElementById('lbImg').src=src;
+  document.getElementById('lightbox').style.display='flex';
+}
+</script>
+
+</body>
+</html>
