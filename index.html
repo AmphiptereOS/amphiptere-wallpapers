@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZDDNFE6F4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HZDDNFE6F4');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amphiptere OS Wallpapers | Official Purple Team Backgrounds</title>
@@ -26,7 +35,6 @@ body{background:#08080e;color:#e9e9ff;font-family:'Segoe UI',system-ui;line-heig
 .btn-dl:hover{background:#9333ea}
 footer{text-align:center;padding:50px;color:#666;border-top:1px solid #1a1a28;margin-top:40px;font-size:.9rem}
 a{color:#a855f7;text-decoration:none}
-/* lightbox */
 #lightbox{position:fixed;inset:0;background:#000d;display:none;justify-content:center;align-items:center;z-index:99;padding:20px}
 #lightbox img{max-width:95vw;max-height:90vh;border-radius:12px}
 </style>
@@ -53,7 +61,6 @@ Contact: amphiptereos@gmail.com
 
 <script>
 const totalWallpapers = 10; 
-
 const grid = document.getElementById('wallGrid');
 for(let i=1;i<=totalWallpapers;i++){
   const name = `wallpaper${i}.png`;
